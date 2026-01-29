@@ -1,7 +1,7 @@
 const {verifyToken} = require("../services/jwtService.js");
 
 module.exports = (req,res,next) => {
-    const authHeader = req.headers["authourization"];
+    const authHeader = req.headers["authorization"];
 
     if(!authHeader){
         return res.status(401).json({message : "No token providied"});
@@ -14,9 +14,9 @@ module.exports = (req,res,next) => {
     }
 
     try{
-        const dcodeToken = verifyToken(token);
+        const decodeToken = verifyToken(token);
 
-        req.user = token;
+        req.user = decodeToken;                                               //attaching user info to request
         next();
     }
     catch(err){
