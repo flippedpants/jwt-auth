@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-// console.log("JWT SERVICE LOADED");
+// console.log("JWT SERVICE LOADED");   
 const generateToken = (payload) => {
     return jwt.sign(payload, process.env.JWT_KEY, {algorithm : "HS256", expiresIn: "1h"});
 }
