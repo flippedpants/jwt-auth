@@ -17,15 +17,11 @@ This is a simple Node.js project created to learn and demonstrate JWT (JSON Web 
 - bcryptjs (Password Hashing)
 - dotenv (Environment Variables)
 
-```sh
-npm install
-```
-
 ## Installation
 
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/flippedpants/jwt-auth.git
    cd jwt-auth
    ```
 
